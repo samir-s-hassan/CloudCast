@@ -30,14 +30,14 @@ class WeatherForecastService {
         return
       }
       // at this point, `data` contains the data received from the response
-        let forecast = parse(data: data)
-        // this response will be used to change the UI, so it must happen on the main thread
+        let decoder = JSONDecoder()
+        let response = try! decoder.decode(WeatherAPIResponse.self, from: data)
         DispatchQueue.main.async {
-          completion?(forecast) // call the completion closure and pass in the forecast data model
+          completion?(response.currentWeather)
         }
+      }
+      task.resume()
     }
-    task.resume() // resume the task and fire the request
-  }
     private static func parse(data: Data) -> CurrentWeatherForecast {
       // transform the data we received into a dictionary [String: Any]
       let jsonDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
