@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "EA777B37-E41A-4532-949E-F5E024192451"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8E705B61-0A82-4E8D-866D-44DD18BFF8C8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CloudCast/WeatherForecastService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "fetchForecast(latitude:longitude:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8E705B61-0A82-4E8D-866D-44DD18BFF8C8 - 45032a7431856622"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static CloudCast.WeatherForecastService.fetchForecast(latitude: Swift.Double, longitude: Swift.Double, completion: Swift.Optional&lt;(CloudCast.CurrentWeatherForecast) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "CloudCast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samirhassan/Desktop/iOS101/CloudCast/CloudCast/WeatherForecastService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35">
+               </Location>
+               <Location
+                  uuid = "8E705B61-0A82-4E8D-866D-44DD18BFF8C8 - 241affdf2a8b3404"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static CloudCast.WeatherForecastService.fetchForecast(latitude: Swift.Double, longitude: Swift.Double, completion: Swift.Optional&lt;(CloudCast.CurrentWeatherForecast) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "CloudCast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samirhassan/Desktop/iOS101/CloudCast/CloudCast/WeatherForecastService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
