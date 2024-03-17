@@ -14,7 +14,17 @@ struct Location {
 }
 
 class ForecastViewController: UIViewController {
-  
+    
+    
+    private var locations = [Location]() // stores the different locations
+    private var selectedLocationIndex = 0 // keeps track of the current selected location
+
+    private func changeLocation(withLocationIndex locationIndex: Int) {
+        guard locationIndex < locations.count else { return }
+        let location = locations[locationIndex]
+        locationLabel.text = location.name
+    }
+    
   @IBOutlet weak var locationLabel: UILabel!
   @IBOutlet weak var descriptionLabel: UILabel!
   @IBOutlet weak var temperatureLabel: UILabel!
@@ -26,6 +36,13 @@ class ForecastViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     addGradient()
+      
+      // Create a few locations to show the forecast for. Feel free to add your own custom location!
+      let sanJose = Location(name: "San Jose", latitude: 37.335480, longitude: -121.893028)
+      let manila = Location(name: "Manila", latitude: 12.8797, longitude: 121.7740)
+      let italy = Location(name: "Italy", latitude: 41.8719, longitude: 12.5674)
+      locations = [sanJose, manila, italy]
+
   }
   
   private func addGradient() {
@@ -39,11 +56,13 @@ class ForecastViewController: UIViewController {
   }
   
   @IBAction func didTapBackButton(_ sender: UIButton) {
-    
+      selectedLocationIndex = max(0, selectedLocationIndex - 1) // make sure selectedLocationIndex is always >= 0
+      changeLocation(withLocationIndex: selectedLocationIndex)
   }
   
   @IBAction func didTapForwardButton(_ sender: UIButton) {
-    
+      selectedLocationIndex = min(locations.count - 1, selectedLocationIndex + 1) // make sure selectedLocationIndex is always < locations.count
+      changeLocation(withLocationIndex: selectedLocationIndex)
   }
 }
 
